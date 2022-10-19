@@ -1,6 +1,7 @@
 package be.heh.secondprojet;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -26,12 +27,20 @@ public class ChildrenActivity extends Activity {
     public void onChildrenClickManager(View v){
         switch(v.getId()){
             case R.id.bt_children_main:
+                Intent navMain = new Intent(this, MainActivity.class);
+                startActivity(navMain);
+                /*
                 Toast.makeText(getApplicationContext(),
                     "Login : " + et_children_Login.getText().toString() +
                     "\n Password : " + et_children_Pwd.getText().toString() +
                     "\n Email : " + et_children_Email.getText().toString(),
                     Toast.LENGTH_LONG)
-                    .show();
+                    .show();*/
+                break;
+
+            case R.id.bt_children_liste:
+                Intent navListe = new Intent(this, Activity_list.class);
+                startActivity(navListe);
                 break;
         }
     }
