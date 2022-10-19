@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Nos données !-->
+    <string-array name="tabversion">
+        <item>CupCake</item>
+        <item>Donut</item>
+        <item>Eclair</item>
+        <item>Froyo</item>
+        <item>GingerBread</item>
+        <item>HoneyComb</item>
+        <item>Ice Cream Sandwich</item>
+        <item>Jelly Bean</item>
+        <item>LolliPop</item>
+        <item>...</item>
+        <item>12</item>
+    </string-array>
+</resources>
