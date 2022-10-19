@@ -27,15 +27,18 @@ public class ChildrenActivity extends Activity {
     public void onChildrenClickManager(View v){
         switch(v.getId()){
             case R.id.bt_children_main:
-                Intent navMain = new Intent(this, MainActivity.class);
-                startActivity(navMain);
-                /*
-                Toast.makeText(getApplicationContext(),
-                    "Login : " + et_children_Login.getText().toString() +
-                    "\n Password : " + et_children_Pwd.getText().toString() +
-                    "\n Email : " + et_children_Email.getText().toString(),
-                    Toast.LENGTH_LONG)
-                    .show();*/
+                if(et_children_Login.getText().toString().isEmpty() || et_children_Pwd.getText().toString().isEmpty() || et_children_Email.getText().toString().isEmpty()){
+                    Toast.makeText(getApplicationContext(), "Veuillez compléter les champs !",
+                    Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    Intent intxt = new Intent(this, MainActivity.class);
+                    intxt.putExtra("login", et_children_Login.getText().toString());
+                    intxt.putExtra("pwd", et_children_Pwd.getText().toString());
+                    intxt.putExtra("email", et_children_Email.getText().toString());
+                    startActivity(intxt);
+                    finish();
+                }
                 break;
 
             case R.id.bt_children_liste:
