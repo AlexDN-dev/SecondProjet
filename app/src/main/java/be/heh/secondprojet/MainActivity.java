@@ -2,24 +2,31 @@ package be.heh.secondprojet;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.Toast;
 
 public class MainActivity extends Activity {
+
+    SharedPreferences prefs_datas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Bundle extratxt = this.getIntent().getExtras();
-        if(extratxt != null)
+        //récupération du login, password et email
+        prefs_datas = PreferenceManager.getDefaultSharedPreferences(getApplication());
+        //n’affiche pas de message lors du premier lancement de l’application
+        if(!prefs_datas.getAll().isEmpty())
         {
             Toast.makeText(getApplicationContext(), "votre login est : "
-                            + (extratxt.getString("login")) + "\n"
-                            + "votre password est : " + (extratxt.getString("pwd")) + "\n"
-                            + "votre email est : " + (extratxt.getString("email") + "\n" ), Toast.LENGTH_SHORT)
+                                    + prefs_datas.getString("login", "NULL")+ "\n"
+                                    + "votre password est : " + prefs_datas.getString("pwd", "NULL")+ "\n"
+                                    + "votre email est : " + prefs_datas.getString("email", "NULL") + "\n",
+                            Toast.LENGTH_SHORT)
                     .show();
         }
     }

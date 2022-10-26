@@ -9,11 +9,7 @@
     android:gravity="center"
     android:background="@color/monVert">
 
-    <ImageView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:src="@android:mipmap/sym_def_app_icon">
-    </ImageView>
+
 
     <TextView
         android:gravity="center"
@@ -68,16 +64,28 @@
         android:layout_height="wrap_content"
         android:text="==> Main !"
         android:onClick="onChildrenClickManager">
-
     </Button>
-
     <Button
         android:id="@+id/bt_children_liste"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="==> Liste !"
         android:onClick="onChildrenClickManager">
-
     </Button>
+
+    <Button
+        android:id="@+id/bt_children_save"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:background="@color/yellow"
+        android:onClick="onChildrenClickManager"
+        android:text="  Save !"></Button>
+    <Button
+        android:id="@+id/bt_children_load"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:background="@color/yellow"
+        android:onClick="onChildrenClickManager"
+        android:text="  Load !"></Button>
 
 </LinearLayout>
