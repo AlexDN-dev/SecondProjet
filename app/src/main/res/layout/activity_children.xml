@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,83 +9,102 @@
     android:gravity="center"
     android:background="@color/monVert">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ChildrenActivity"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@color/monVert">
 
+            <TextView
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="INSCRIPTION"
+                android:textSize="50sp"
+                android:textColor="@color/white"
+                android:layout_marginBottom="20dp">
+            </TextView>
 
-    <TextView
-        android:gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="INSCRIPTION"
-        android:textSize="50sp"
-        android:textColor="@color/white"
-        android:layout_marginBottom="20dp">
-    </TextView>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Login"
-        android:textSize="20dp"/>
-    <EditText
-        android:id="@+id/et_children_login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp">
-    </EditText>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Mail"
-        android:textSize="20dp"/>
-    <EditText
-        android:id="@+id/et_children_email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp">
-    </EditText>
-    <TextView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="Password"
-    android:textSize="20dp"/>
-    <EditText
-        android:id="@+id/et_children_pwd"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:inputType="textPassword"
-        android:layout_marginRight="10dp">
-    </EditText>
-    <Button
-        android:id="@+id/bt_children_main"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="==> Main !"
-        android:onClick="onChildrenClickManager">
-    </Button>
-    <Button
-        android:id="@+id/bt_children_liste"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="==> Liste !"
-        android:onClick="onChildrenClickManager">
-    </Button>
+            <ImageView
+                android:src="@mipmap/ic_launcher"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"/>
 
-    <Button
-        android:id="@+id/bt_children_save"
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
-        android:background="@color/yellow"
-        android:onClick="onChildrenClickManager"
-        android:text="  Save !"></Button>
-    <Button
-        android:id="@+id/bt_children_load"
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
-        android:background="@color/yellow"
-        android:onClick="onChildrenClickManager"
-        android:text="  Load !"></Button>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:textSize="20dp"/>
+            <EditText
+                android:id="@+id/et_children_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+            </EditText>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mail"
+                android:textSize="20dp"/>
+            <EditText
+                android:id="@+id/et_children_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+            </EditText>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:textSize="20dp"/>
+            <EditText
+                android:id="@+id/et_children_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:inputType="textPassword"
+                android:layout_marginRight="10dp">
+            </EditText>
+            <Button
+                android:id="@+id/bt_children_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="==> Main !"
+                android:onClick="onChildrenClickManager">
+            </Button>
+            <Button
+                android:id="@+id/bt_children_liste"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="==> Liste !"
+                android:onClick="onChildrenClickManager">
+            </Button>
 
-</LinearLayout>
+            <Button
+                android:id="@+id/bt_children_save"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:background="@color/yellow"
+                android:onClick="onChildrenClickManager"
+                android:text="  Save !"></Button>
+            <Button
+                android:id="@+id/bt_children_load"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:background="@color/yellow"
+                android:onClick="onChildrenClickManager"
+                android:text="  Load !"></Button>
+
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

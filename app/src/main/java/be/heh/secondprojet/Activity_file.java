@@ -32,11 +32,16 @@ public class Activity_file extends Activity {
             reader.close();
             ins.close();
             String[] items = out.toString().split("#");
+            String[] context = {"Login", "Password", "Email"};
             int i = 0;
+            int j = 0;
             for (String item : items) {
-                tv_file_datas.setText(tv_file_datas.getText().toString() +
-                        "item " + Integer.toString(i + 1) + " = " + item + "\n");
-                i++;
+                tv_file_datas.setText(tv_file_datas.getText().toString() + Integer.toString(i + 1) + ". " + context[j] + " = " + item + "\n");
+                j++;
+                if(j == 3){
+                    i++;
+                    j=0;
+                }
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
